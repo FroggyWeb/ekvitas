@@ -1,0 +1,101 @@
+.burger {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+  @include r(1023) {
+      display: none;
+  }
+
+  &__el {
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: $c-main;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: $c-main;
+      transition: all 0.3s;
+      transform-origin: 50% 50%;
+    }
+
+    &:before {
+      transform: translateY(-6px);
+    }
+
+    &:after {
+      transform: translateY(6px);
+    }
+  }
+
+  &.is-open {
+    .burger__el {
+      background-color: transparent;
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+
+.nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+@include r(1024) {
+  .nav{
+    &__list {
+      display: flex;
+      &:last-child .nav__link{
+        padding-right: 0;
+      }
+    }
+    &__link {
+      font-size: 18px;
+      padding: 0 1em;
+    }
+  }
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.lang-link {
+  text-decoration: none;
+  font-weight: 700;
+  &:not(:first-child):before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 1px;
+    height: 12px;
+    background-color: $c-main;
+  }
+  &.active {
+    color: $c-sec;
+  }
+}

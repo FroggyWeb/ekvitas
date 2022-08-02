@@ -1,0 +1,41 @@
+<div class="header-page">
+  <div class="header-page__container">
+    <a href="/" class="header-page__logo">
+      <img src="@/img/logo-header-ru.svg" alt="Бюро переводов">
+    </a>
+    <div class="header-page__contacts head-contacts">
+      <div class="head-contacts__about">головной офис</div>
+      <a href="tel:+375 17 251-77-77" class="head-contacts__tel">+375 17 251-77-77</a>
+      <a href="#popup-tel" class="head-contacts__popup-ctrl">офисы в регионах</a>
+    </div>
+    <div class="header-page__soc socials">
+      <a href="#" class="social">
+        {{ macro.iconSvg('icon-telegram') }}
+      </a>
+      <a href="#" class="social">
+        {{ macro.iconSvg('icon-viber') }}
+      </a>
+      <a href="#" class="social social--whatsapp">
+        {{ macro.iconSvg('icon-whatsapp') }}
+      </a>
+    </div>
+    <div class="header-page__main">
+      <div class="header-page__line">
+        <div class="header-page__titme">Время работы: Пн - Сб с 9:00 до 18:00</div>
+        <div class="lang-switcher">
+          <a href="#" class="lang-link active">RU</a>
+          <a href="#" class="lang-link">PL</a>
+          <a href="#" class="lang-link">EN</a>
+        </div>
+      </div>
+      <nav class="header-page__nav nav">
+        {% include './_nav.html' %}
+      </nav>
+    </div>
+
+
+    <div class="burger">
+      <span class="burger__el"></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+body {
+  font-variant-numeric: lining-nums;
+  background-color: #F5F5F5;
+}
+
+.container,
+[class*="__container"] {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-page {
+  background-color: #fff;
+  padding: 10px 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__logo {
+    margin-bottom: -5px;
+    margin-right: auto;
+  }
+
+  &__contacts {}
+
+  &__soc {
+    color: $c-sec;
+    margin-right: auto;
+    .social:hover {
+      color: $c-main;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__line {
+    justify-content: flex-end;
+    display: flex;
+    padding-left: 18px;
+  }
+}
+
+.head-contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2px;
+  &__about {
+    color: $c-light;
+  }
+
+  &__tel {
+    font-weight: 800;
+    font-size: 22px;
+    color: $c-main;
+    text-decoration: none;
+  }
+
+  &__popup-ctrl {}
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 32px;
+}
+.social {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .3s;
+  line-height: 0;
+  &--whatsapp {
+    font-size: 1.15em;
+    align-self: flex-start;
+  }
+}

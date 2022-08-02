@@ -1,0 +1,56 @@
+:root {
+  --lg: 20px;
+}
+@media screen and (min-width: 767px) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    --lg: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 20px;
+  }
+  body {
+    --lg: 50px;
+  }
+}
+
+
+$breakpoints: (
+  "xs": 480px,
+  "sm": 540px,
+  "md": 767px,
+  "lg": 992px,
+  "xl": 1024px,
+  "xxl": 1400px,
+) !default;
+
+$f-base: 16px/1.2 "Raleway", sans-serif;
+$f-title: "Raleway", sans-serif;
+$f-color: #555;
+
+$lg: var(--lg);
+
+$c-main: #0A3477;
+$c-sec: #24B282;
+$c-light: #949495;
+$c-text: #000;
+$c-link: $c-main;
+$c-active: $c-sec;
+
+$hc-offcanvas-nav-background-color: #fff;
+$hc-offcanvas-nav-text-color: $c-text;
+$hc-offcanvas-nav-text-size: 16px;
+
+
+$container-max-widths: (
+  xxl: 1400px,
+);
+
+// * {
+//   outline: 1px solid #000;
+// }

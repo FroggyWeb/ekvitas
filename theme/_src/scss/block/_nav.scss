@@ -3,7 +3,7 @@
   display: inline-block;
   cursor: pointer;
 
-  @include r(1023) {
+  @include r(1280) {
       display: none;
   }
 
@@ -51,6 +51,7 @@
 
 
 .nav {
+  display: none;
   &__list {
     margin: 0;
     padding: 0;
@@ -63,8 +64,9 @@
     font-weight: 700;
   }
 }
-@include r(1024) {
+@include r(1280) {
   .nav{
+    display: grid;
     &__list {
       display: flex;
       &:last-child .nav__link{

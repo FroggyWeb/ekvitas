@@ -5,7 +5,7 @@
   @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
     border-color: transparent;
     border-style: solid;
-    border-width: $size / 2;
+    border-width: math.div($size , 2);
 
     @if $direction == up {
       border-bottom-color: $color;

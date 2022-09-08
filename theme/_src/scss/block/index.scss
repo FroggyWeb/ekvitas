@@ -1,21 +1,26 @@
 .intro {
   &__container {
+    display: grid;
+    gap: $lg;
+    align-items: center;
     @include r(1024) {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: 35% 1fr;
-      align-items: center;
+      grid-template-columns: 600px 1fr;
     }
   }
 
-  &__txt {}
+  &__txt {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    gap: $lg;
+  }
 
   &__title {
     font-weight: 800;
     color: $c-main;
     max-width: 530px;
     font-size: 48px;
-    line-height: 1;
+    line-height: .9;
     margin: 0;
     @include r(1024) {
       font-size: 60px;
@@ -31,7 +36,10 @@
 
   &__getform {}
 
-  &__counter {}
+  &__counter {
+    display: flex;
+    gap: $lg;
+  }
 }
 
 .btn {
@@ -41,7 +49,15 @@
 .counters {}
 
 .count {
-  &__num {}
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  color: $c-dark;
+  &__num {
+    font-size: 1.9em;
+    font-weight: 800;
+    white-space: nowrap;
+  }
 
   &__txt {}
 }

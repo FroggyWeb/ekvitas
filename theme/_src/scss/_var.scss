@@ -15,7 +15,7 @@
     font-size: 20px;
   }
   body {
-    --lg: 50px;
+    --lg: 40px;
   }
 }
 
@@ -38,6 +38,7 @@ $lg: var(--lg);
 $c-main: #0A3477;
 $c-sec: #24B282;
 $c-light: #949495;
+$c-dark: #6E7581;
 $c-text: #000;
 $c-link: $c-main;
 $c-active: $c-sec;

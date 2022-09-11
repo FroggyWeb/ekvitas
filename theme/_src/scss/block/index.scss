@@ -42,11 +42,6 @@
   }
 }
 
-.btn {
-  &--light {}
-}
-
-.counters {}
 
 .count {
   text-align: center;
@@ -60,4 +55,76 @@
   }
 
   &__txt {}
+}
+
+.services {
+  &__container {
+    @include r(1024) {
+      display: grid;
+      grid-template-columns: 20% 1fr;
+      gap: $lg;
+    }
+  }
+
+  .tabs__inner-list {
+    @include r(650) {
+      columns: 2;
+    }
+  }
+}
+
+.tabs__inner-item {
+  display: flex;
+  font-weight: bold;
+  padding: .25em 0;
+  &:before {
+    content: '';
+    flex: 0 0 .5em;
+    width: .5em;
+    height: .5em;
+    margin: .4em .25em 0 0;
+    border-radius: 50%;
+    background-color: $c-sec;
+  }
+}
+
+.discounts-wrap {
+  padding: 20px 0;
+  background-color: #fff;
+}
+.discounts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.discount {
+  flex: 0 1 250px;
+  border-radius: 10px;
+  position: relative;
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 10px;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #cdcaca 0%, transparent 90%);
+  }
+  &__txt {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__num {
+    text-align: right;
+    color: $c-sec;
+    font-size: 60px;
+    font-weight: bold;
+    span {
+      font-weight: normal;
+      font-size: .75em;
+    }
+  }
 }

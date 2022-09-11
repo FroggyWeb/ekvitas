@@ -8,7 +8,8 @@ class VanillaTabs {
 			'selector': '.tabs',
 			'type': 'horizontal',
 			'responsiveBreak': 840,
-			'activeIndex' : 0
+			'activeIndex': 0,
+			'afterTitle': ''
 		}
 
 		this.options = Object.assign( DEFAULTS, opts );
@@ -66,7 +67,7 @@ class VanillaTabs {
 					tabItem.innerHTML = '<div class="tabs__content_wrapper">' + tabContent + '</div>';
 
 					// insert nav link for accordion navigation
-					tabItem.insertAdjacentHTML( 'afterbegin', '<a class="tabs__nav_link">' + tabTitle + '</a>');
+					tabItem.insertAdjacentHTML( 'afterbegin', '<a class="tabs__nav_link">' + tabTitle + this.options.afterTitle +'</a>');
 
 				}
 
@@ -76,7 +77,7 @@ class VanillaTabs {
 			let navElemsHTML = '';
 
 			tabsTitles.forEach( ( title ) => {
-				navElemsHTML = navElemsHTML + '<a class="tabs__nav_link">' + title + '</a>';
+				navElemsHTML = navElemsHTML + '<a class="tabs__nav_link">' + title +  this.options.afterTitle + '</a>';
 			});
 
 			tabsElem.insertAdjacentHTML( 'afterbegin', '<li class="tabs__nav">' + navElemsHTML + '</li>');

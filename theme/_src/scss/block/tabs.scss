@@ -9,6 +9,10 @@
     margin: 0;
     padding: 0;
   }
+  .icon-arr-down{
+    transition: all .3s;
+    display: none;
+  }
   &.style__vertical {
     .tabs__nav {
       display: flex;
@@ -45,23 +49,19 @@
   }
 
   &__nav_link {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    padding: 1em 40px 1em 1em;
+    gap: 1em;
+    padding: 1em;
     font-weight: 800;
     transition: all .3s;
     cursor: pointer;
     &:not(:first-child) {
       margin-top: .5em;
     }
-    &:after {
-      content: '';
-      position: absolute;
-      right: .5em;
-      top: 1em;
-      transform: translateY(50%);
-      @include triangle (10px, inherit, right)
-    }
+    
     &:hover, &.is__active {
       background-color: $c-sec;
       color: #fff;
@@ -81,10 +81,15 @@
     display: block;
   }
   .tabs__nav_link {
-    display: block;
+    display: flex;
+    .icon-arr-down {
+      display: block;
+    }
+    &.is__active {
+      .icon-arr-down {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
-@include r(1024) {
-
-}

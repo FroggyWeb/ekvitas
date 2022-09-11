@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./assets/main.css">
   
 </head>
 
@@ -20,32 +19,34 @@
 
   <div class="top-contact">
   <div class="top-contact__container">
-    <ul class="top-contact__list">
-      <li class="top-contact__item">
-        <div class="top-contact__city">Минск</div>
-        <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-30</a>
-      </li>
-      <li class="top-contact__item">
-        <div class="top-contact__city">Брест</div>
-        <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-60</a>
-      </li>
-      <li class="top-contact__item">
-        <div class="top-contact__city">Гродно</div>
-        <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-10</a>
-      </li>
-      <li class="top-contact__item">
-        <div class="top-contact__city">Могилев</div>
-        <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-66</a>
-      </li>
-      <li class="top-contact__item">
-        <div class="top-contact__city">Пинск</div>
-        <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-29</a>
-      </li>
-      <li class="top-contact__item">
-        <div class="top-contact__city">Лида</div>
-        <a href="tel: +3752900000" class="top-contact__link">+375 29 386-03-34</a>
-      </li>
-    </ul>
+    <div class="scroll">
+      <ul class="top-contact__list">
+        <li class="top-contact__item">
+          <div class="top-contact__city">Минск</div>
+          <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-30</a>
+        </li>
+        <li class="top-contact__item">
+          <div class="top-contact__city">Брест</div>
+          <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-60</a>
+        </li>
+        <li class="top-contact__item">
+          <div class="top-contact__city">Гродно</div>
+          <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-10</a>
+        </li>
+        <li class="top-contact__item">
+          <div class="top-contact__city">Могилев</div>
+          <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-66</a>
+        </li>
+        <li class="top-contact__item">
+          <div class="top-contact__city">Пинск</div>
+          <a href="tel: +3752900000" class="top-contact__link">+375 29 386-23-29</a>
+        </li>
+        <li class="top-contact__item">
+          <div class="top-contact__city">Лида</div>
+          <a href="tel: +3752900000" class="top-contact__link">+375 29 386-03-34</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -217,6 +218,62 @@
           tab 6
         </li>
       </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section discounts-wrap">
+  <div class="container">
+    <div class="discounts">
+      <div class="discount">
+        <div class="discount__txt">В сентябре
+          скидки на апостиль</div>
+        <div class="discount__num">-15<span>%</span> </div>
+      </div>
+      <div class="discount">
+        <div class="discount__txt">Скидки в Лиде
+          на перевод с английского</div>
+        <div class="discount__num">-25<span>%</span> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="order section">
+  <div class="container">
+    <h2 class="title">Заявка на перевод</h2>
+    <div class="order__wrap">
+      <form action="#" class="form-order">
+    <div class="form-line">
+        <label><span>Ваше имя*</span>
+            <input type="text" required name="name">
+        </label>
+    </div>
+    <div class="form-line">
+        <label><span>Контактный телефон*</span>
+            <input type="tel" required name="tel">
+        </label>
+    </div>
+    <div class="form-line">
+        <label><span>Загрузите документ</span>
+            <input type="file" name="file">
+        </label>
+    </div>
+    <div class="form-line">
+        <label><span>Сообщение</span>
+            <textarea name="msg" rows='4'></textarea>
+        </label>
+    </div>
+    <div class="form-footer">
+        <div class="form-footer__info">
+            <p>Поля, отмеченные знаком * обязательны для заполнения</p>
+            <p> Отправляя форму, вы соглашаетесь с условиями обработки и использования
+                персональных данных</p>
+        </div>
+        <input class="btn btn--fill" type="submit" value="Отправить заявку">
+    </div>
+</form>
+
     </div>
   </div>
 </div>

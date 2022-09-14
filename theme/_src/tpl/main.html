@@ -110,6 +110,21 @@
     <h2 class="title">Заявка на перевод</h2>
     <div class="order__wrap">
       {% include "parthtml/form_order.html" %}
+      <div class="order__more">
+        <div>Заполните форму или свяжитесь с нашим менеджером по телефону</div>
+        <a href="tel:+375 17 251-77-77" class="tel">+375 17 251-77-77</a>
+        <div class="socials">
+          <a href="#" class="social">
+            {{ macro.iconSvg('icon-telegram') }}
+          </a>
+          <a href="#" class="social">
+            {{ macro.iconSvg('icon-viber') }}
+          </a>
+          <a href="#" class="social social--whatsapp">
+            {{ macro.iconSvg('icon-whatsapp') }}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

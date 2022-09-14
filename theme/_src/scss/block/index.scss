@@ -27,10 +27,12 @@
     }
     span {
       display: block;
-      margin-left: 3.5em;
       // text-align: right;
       font-weight: normal;
       font-size: .75em;
+      @include r(450) {
+        margin-left: 3.5em;
+      }
     }
   }
 
@@ -39,6 +41,10 @@
   &__counter {
     display: flex;
     gap: $lg;
+    @include rmax(450){
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -104,13 +110,14 @@
   border-radius: 10px;
   position: relative;
   &:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: -30px;
-    bottom: 0;
-    width: 10px;
-    height: 100%;
-    background: radial-gradient(50% 50% at 50% 50%, #cdcaca 0%, transparent 90%);
+    @extend %sep;
+    @include rmax(600) {
+      left: 0;
+      right: auto;
+      bottom: -30px;
+      width: 100%;
+      height: 10px;
+    }
   }
   &__txt {
     font-weight: bold;
@@ -128,3 +135,12 @@
     }
   }
 }
+
+.order {
+  &__wrap {
+    display: grid;
+  }
+
+  &__more {}
+}
+

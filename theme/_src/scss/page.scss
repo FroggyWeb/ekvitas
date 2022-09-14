@@ -3,6 +3,16 @@ body {
   background-color: #F5F5F5;
 }
 
+%sep {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 10px;
+  height: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, #cdcaca 0%, transparent 90%);
+}
+
 .container,
 [class*="__container"] {
   max-width: 1400px;
@@ -146,13 +156,17 @@ body {
   }
 
   &__tel {
-    font-weight: 800;
-    font-size: 22px;
-    color: $c-main;
-    text-decoration: none;
+    
   }
 
   &__popup-ctrl {}
+}
+
+.tel {
+  font-weight: 800;
+  font-size: 22px;
+  color: $c-main;
+  text-decoration: none;
 }
 
 .socials {
@@ -160,6 +174,7 @@ body {
   align-items: center;
   gap: 10px;
   font-size: 32px;
+  color: $c-sec;
 }
 .social {
   color: inherit;

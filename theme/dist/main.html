@@ -243,7 +243,8 @@
   <div class="container">
     <h2 class="title">Заявка на перевод</h2>
     <div class="order__wrap">
-      <form action="#" class="form-order">
+      
+      <form action="#" class="form-order order-form--index" method="post" enctype="multipart/form-data">
     <div class="form-line">
         <label><span>Ваше имя*</span>
             <input type="text" required name="name">
@@ -254,8 +255,14 @@
             <input type="tel" required name="tel">
         </label>
     </div>
-    <div class="form-line">
-        <label><span>Загрузите документ</span>
+    <div class="form-line input-file">
+        <label>
+            
+<svg class="iconsvg icon-file ">
+  <use xlink:href="#icon-file"></use>
+</svg>
+
+            <span>Загрузите документ</span>
             <input type="file" name="file">
         </label>
     </div>
@@ -275,8 +282,10 @@
 </form>
 
       <div class="order__more">
-        <div>Заполните форму или свяжитесь с нашим менеджером по телефону</div>
-        <a href="tel:+375 17 251-77-77" class="tel">+375 17 251-77-77</a>
+        <div>Заполните форму или свяжитесь с нашим менеджером по телефону
+          <a href="tel:+375 17 251-77-77" class="tel">+375 (17) 251-77-77</a>
+        </div>
+
         <div class="socials">
           <a href="#" class="social">
             
@@ -300,10 +309,27 @@
 
           </a>
         </div>
+        <a href="#" class="btn btn--fill">Заказать обратный звонок</a>
       </div>
     </div>
   </div>
 </div>
+
+<div class="info section">
+  <div class="container">
+    <div class="info__body">
+      <p>Стандартная учетная страница в бюро переводов рассчитывается за стандартную учетную страницу – 1800 знаков с
+        пробелами
+        (около 1500 знаков без пробелов или 250 слов).</p>
+      <p>Минимальный заказ на выполнение письменного перевода - 1 условная страница. Если документ содержит менее 1800
+        знаков,
+        его стоимость будет рассчитываться как за одну условную страницу.</p>
+      <p><a href="#"><strong>Подробнее о ценообразовании и прайс-лист на услуги</strong></a></p>
+    </div>
+  </div>
+</div>
+
+
 
 
 

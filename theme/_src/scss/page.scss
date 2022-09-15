@@ -92,9 +92,6 @@ body {
         display: none;
       }
     }
-    .social:hover {
-      color: $c-main;
-    }
   }
   &__main {
     display: none;
@@ -148,6 +145,7 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 2px;
+  line-height: 1.2;
   @include rm(650, 780) {
     margin-right: auto;
   }
@@ -182,6 +180,9 @@ body {
   display: inline-block;
   transition: all .3s;
   line-height: 0;
+  &:hover {
+    color: $c-main;
+  }
   &--whatsapp {
     font-size: 1.15em;
     align-self: flex-start;
@@ -194,4 +195,30 @@ body {
   color: $c-main;
   margin: 0 0 .5em;
   line-height: 1;
+}
+
+.order {
+  &__wrap {
+    display: grid;
+    gap: 60px;
+    @include r(767) {
+      align-items: start;
+      text-align: left;
+      grid-template-columns: 1fr 25%;
+    }
+  }
+  &__more {
+    display: grid;
+    gap: 20px;
+    @include rmax(767) {
+      justify-items: center;
+      text-align: center;
+      justify-items: center;
+    }
+    .tel {
+      display: block;
+      margin-top: .25em;
+      font-size: 24px;
+    }
+  }
 }

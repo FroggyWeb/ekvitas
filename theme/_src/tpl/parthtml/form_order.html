@@ -1,4 +1,4 @@
-<form action="#" class="form-order">
+<form action="#" class="form-order {{ orderform }}" method="post" enctype="multipart/form-data">
     <div class="form-line">
         <label><span>Ваше имя*</span>
             <input type="text" required name="name">
@@ -9,8 +9,10 @@
             <input type="tel" required name="tel">
         </label>
     </div>
-    <div class="form-line">
-        <label><span>Загрузите документ</span>
+    <div class="form-line input-file">
+        <label>
+            {{ macro.iconSvg('icon-file') }}
+            <span>Загрузите документ</span>
             <input type="file" name="file">
         </label>
     </div>

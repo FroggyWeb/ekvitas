@@ -4,7 +4,7 @@
   cursor: pointer;
 
   @include r(1280) {
-      display: none;
+    display: none;
   }
 
   &__el {
@@ -49,7 +49,6 @@
   }
 }
 
-
 .nav {
   display: none;
   &__list {
@@ -65,11 +64,11 @@
   }
 }
 @include r(1280) {
-  .nav{
+  .nav {
     display: grid;
     &__list {
       display: flex;
-      &:last-child .nav__link{
+      &:last-child .nav__link {
         padding-right: 0;
       }
     }
@@ -100,5 +99,24 @@
   }
   &.active {
     color: $c-sec;
+  }
+}
+
+.fnav {
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  border-bottom: 1px solid rgba(#fff, 0.5);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  &__item {
+  }
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
   }
 }

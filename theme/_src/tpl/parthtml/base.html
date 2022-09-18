@@ -21,6 +21,8 @@
 
   {% block content %}{% endblock %}
 
+  {% include "./footer.html" %}
+
   {% if env %}
   <script type="module" src="http://localhost:5173/@vite/client"></script>
   <script type="module" src="http://localhost:5173/_src/js/main.js"></script>
